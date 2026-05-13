@@ -18,8 +18,5 @@ pkgs.mkShell {
       pkgs.zlib
       pkgs.glib
     ]}:$LD_LIBRARY_PATH
-    
-    # Ensures pip installs into the direnv-created virtual environment
-    export PIP_PREFIX=$(pwd)/.direnv/python-venv
   '';
 }

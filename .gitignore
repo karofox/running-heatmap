@@ -2,3 +2,8 @@
 *.csv
 
 .direnv
+strava_export/*
+outputs/*
+cache/*
+
+.ipynb_checkpoints

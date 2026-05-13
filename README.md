@@ -65,3 +65,18 @@ GPS altitude is much noisier than horizontal position - typically ±10–20 m ve
 ### Why the code uses two different projections
 
 The raster grid is built in Web Mercator (EPSG:3857) so it aligns directly to the map tile basemap without any reprojection. But Web Mercator distorts distances at higher latitudes, so anything involving real-world metres - the clip radius around home, and the rise/run calculation for gradient - uses a local UTM projection instead. The visual output is unaffected, it just means the underlying measurements are accurate.
+
+## karofox' additions
+
+### New features
+
+- added functions for .tcx.gz files (e.g. from Polar watches)
+- added date stampd to the output file
+- added direnv for development on NixOS
+
+### Using direnv
+
+Run `direnv allow` in the project's root. This will create hidden `.direnv` directory with your environment. Then, run `pip install -r requirements.txt`. Those dependencies will persist.
+
+Run `jupyter notebook` to run the project.
+
